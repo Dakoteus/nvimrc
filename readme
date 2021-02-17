@@ -1,3 +1,3 @@
-Install universal ctags and then Easytags is bad, so after running PlugInstall, 
-you have to navigate to the easytags.vim file and replace if !xolox ... (5.5) to if !xolox ... (0.0.0)
-in order for the plugin to work (it was meant for the other ctags but it just works with universal)
+Ctags and Easytags:
+install universal ctags (apt,pacman, whtver) and Easytags is bad, so after running PlugInstall, you have to navigate to the easytags.vim file (for me ~/.local/share/nvim/plugins/vim-easytags) and replace if !xolox ... (5.5) to if !xolox ... (0.0.0) in order for the plugin to work (it was meant for the other ctags but it just works with universal)
+When you first nvim into a codebase, run :UpdateTags -R directory, then tags and highlighting should just work, if not try restarting nvim. Works for C++, if you want it to work for others, you need to add autocmd BufEnter *.fileextension :HighlightTags to the nvimrc.
