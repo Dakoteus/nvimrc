@@ -9,14 +9,12 @@ endif
 if !empty(glob(stdpath('data').'/site/autoload/plug.vim'))
 command Update PlugUpgrade | PlugClean! | PlugUpdate --sync | q | qa
 call plug#begin(stdpath('data').'/plugged')
-Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'https://github.com/chrisbra/unicode.vim.git'
 Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 let g:Unicode_URL = 'https://www.unicode.org/Public/UNIDATA/UnicodeData.txt'
 Plug 'https://github.com/gruvbox-community/gruvbox.git'
 Plug 'https://github.com/justmao945/vim-clang.git', { 'for': ['c', 'cpp'] }
-Plug 'https://github.com/xavierd/clang_complete.git'
 let g:clang_auto=1
 let g:clang_complete_auto=1
 let g:clang_library_path='/usr/lib/llvm-7/lib'
@@ -26,14 +24,11 @@ let g:clang_cpp_options = '-std=gnu++17'
 Plug 'https://github.com/majutsushi/tagbar.git', { 'on': ['Tagbar', 'TagbarClose', 'TagbarCurrentTag', 'TagbarDebug', 'TarbarDebugEnd', 'TagbarGetTypeConfig', 'TagbarOpen', 'TagbarOpenAutoClose', 'TagbarSetFoldlevel', 'TagbarShowTag', 'TagbarToggle', 'TagbarTogglePause'] }
 let g:tagbar_compact = 1
 let g:tagbar_zoomwidth = 0
-Plug 'https://github.com/rhysd/vim-grammarous.git', { 'on': ['GrammarousCheck', 'GrammarousReset'] }
-if executable('languagetool')
-let g:grammarous#languagetool_cmd = 'languagetool'
-endif
 Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/w0rp/ale.git'
 Plug 'https://github.com/xolox/vim-easytags.git'
 Plug 'https://github.com/xolox/vim-misc.git'
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 let g:ale_c_clang_options = '-Og -Weverything -g -pipe -std=gnu17'
 let g:ale_c_gcc_options = '-Og -Wall -Wextra -Wpedantic -fvar-tracking-assignments -g -pipe'
 let g:ale_cpp_clang_options = '-Og -Weverything -g -pipe -std=gnu++17'
