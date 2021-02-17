@@ -1,3 +1,3 @@
 Install universal ctags and then Easytags is bad, so after running PlugInstall, 
-you have to navigate to the easytags.vim file and replace if !xolox ... (5.5) to if !xolox(0.0.0)
+you have to navigate to the easytags.vim file and replace if !xolox ... (5.5) to if !xolox ... (0.0.0)
 in order for the plugin to work (it was meant for the other ctags but it just works with universal)
